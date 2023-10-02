@@ -1,0 +1,268 @@
+/* 
+** Layout for tool
+** @author XiaoYi
+** file: index.html
+** since 2023
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --primary-color: crimson;
+    --text-color: #fff;
+    --bg-footer: #111;
+    --background: #222b45;
+    --error: #e41749;
+    --dark: #151a30;
+}
+
+/* logo */
+.logo span{
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.title-logo  {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+/* end logo */
+
+/* input link */
+
+.input-width {
+    width: 100%;
+    max-width: 57rem;
+    margin: 0 auto;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+.card-xiaoyi {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.card-body input{
+    width: 100%;
+    background-color: transparent;
+    border:none;
+}
+.card-body input:focus{
+    /* outline:none; */
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dpl-flex{
+    display: flex;
+    justify-content: center;
+}
+.ex-title {
+    background-color: var(--bg-footer);
+    color: var(--text-color);
+    font-size: 0.6rem;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 6px;
+    border-radius: 6px;
+}
+.text-example {
+    margin-bottom: 10px;
+}
+.text-example div {
+    margin-bottom: 6px;
+}
+.border-input {
+    border: #111 solid 2px;
+}
+/* end input link */
+/* start footer */
+footer {
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--bg-footer);
+    padding: 15px 23px;
+    color: var(--text-color);
+    text-align: center;
+}
+footer span span{
+    color: var(--primary-color);
+}
+
+/* end footer */
+
+
+[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+    display: none;
+}
+
+[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+    display:none;
+}
+
+[wire\:offline] {
+    display: none;
+}
+
+[wire\:dirty]:not(textarea):not(input):not(select) {
+    display: none;
+}
+
+input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+    animation-duration: 50000s;
+    animation-name: livewireautofill;
+}
+
+@keyframes livewireautofill { from {} }
+
+
+/* alert */
+
+.modal-xiaoyi {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+.modal-xiaoyi-box {
+    border: var(--background) solid 1px;
+    border-radius: 4px;
+    padding: auto;
+    background-color: var(--text-color);
+
+    max-width: 600px;
+    margin: 20px 40px;
+    padding: 20px;
+}
+.modal-xiaoyi-box h1 {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+}
+  
+.modal-xiaoyi-box  p {
+    margin: 0 0 1.5rem;
+}
+
+.faded-xiaoyi {
+    opacity: 0.3;
+}
+.modal-xiaoyi-box button {
+    font-weight: 600;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    color: var(--text-color);
+    background-color: var(--error);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: var(--error) solid 1px;
+}
+.modal-xiaoyi-box button:hover {
+    font-weight: 600;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    color: var(--dark);
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: var(--dark) solid 1px;
+}
+
+tbody {
+    display:block;
+    max-height:312px;
+    overflow:auto;
+}
+table thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+tbody {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+tbody::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+@keyframes dismiss {
+    to {
+      opacity: 0; /* full fade out, but even an invisible element blocks stuff behind it... */
+      visibility: hidden; /* ...which is where visibility comes in, to get the modal out of the way */
+    }
+}
+
+
+  /* user smaller font sizes on smaller screens */
+@media (max-width: 580px) {
+    body {
+      font-size: 1rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  
